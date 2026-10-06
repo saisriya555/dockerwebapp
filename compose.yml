@@ -5,6 +5,8 @@ services:
     image: saibannu/database:v1
     ports:
       - "3306:3306"
+    deploy:
+      replicas: 3
     networks:
       - mynetwork
 
@@ -12,6 +14,8 @@ services:
     image: saibannu/javaapp:v1
     ports:
       - "1111:8080"
+    deploy:
+      replicas: 3
     depends_on:
       - devopsdb
     networks:
