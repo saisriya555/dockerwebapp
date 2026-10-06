@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: saibannu/database
+    image: saibannu/database:v1
     ports:
       - "3306:3306"
     deploy:
@@ -11,7 +11,7 @@ services:
       - mynetwork
 
   application:
-    image: saibannu/javaapp
+    image: saibannu/javaapp:v1
     ports:
       - "1111:8080"
     deploy:
